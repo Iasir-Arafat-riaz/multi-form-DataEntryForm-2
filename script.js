@@ -4,6 +4,7 @@ const formParentDiv = document.getElementById("product-section");
 const displayProducts = document.getElementById("render");
 document.getElementById("plus-btn").addEventListener("click", () => {
   count++;
+
   const htmlForm = `<div class="products-form-div ${
     "products-form-div-" + count
   }">
@@ -24,6 +25,7 @@ document.getElementById("plus-btn").addEventListener("click", () => {
   </form>
   <br/>
   </div>`;
+
   const formParentDiv = document.getElementById("product-section");
   const innerDiv = document.createElement("div");
   innerDiv.innerHTML = htmlForm;
@@ -32,6 +34,7 @@ document.getElementById("plus-btn").addEventListener("click", () => {
 
 const productFormDiv = document.getElementsByClassName("products-form-div");
 const submitButton = document.getElementById("submit-btn");
+
 submitButton.addEventListener("click", () => {
   products = [];
   const productArray = Array.from(
